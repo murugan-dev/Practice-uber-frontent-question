@@ -1,0 +1,19 @@
+.box-visible{
+    height: 100px;
+    width: 100px;
+    border: 1px solid #252525;
+    cursor: pointer;
+}
+.shape-con{
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 20px;
+    transition: background-color .2s ease-in-out;
+}
+.box-hidden{
+    opacity: 0;
+    cursor: initial;
+}
+.box-colored{
+    background-color: green;
+}
