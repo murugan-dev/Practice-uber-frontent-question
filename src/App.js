@@ -1,13 +1,21 @@
 // Use this data to create the shape
-import Shapes from "./componets/Shapes"
-const BOX_DATA = [
-  [1, 1, 1],
-  [1, 0, 0],
-  [1, 1, 1],
-];
+// import Shapes from "./components/Shapes"
+// import BOX_DATA from "./constant/Box";
+
+// Bar Interview Questions
+// To create the Button toggle the bar chart
+import BarChartToggle from "./components/BarChartToggle";
+
 
 export default function App() {
+  
   return <main>
-    <Shapes box={BOX_DATA}/>
+    {/* <Shapes box={BOX_DATA}/> */}
+
+    <BarChartToggle />
+
+    
+
+
   </main>;
 }
