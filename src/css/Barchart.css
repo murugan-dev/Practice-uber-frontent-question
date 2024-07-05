@@ -24,12 +24,15 @@
 .barChart-container{
     margin-top: 20px;
     position: relative;
+    height: 300px;
+    width: 80%;
+
     
 }
 
 .axis{
-    height: 300px;
-    width: 500px;
+    height: 100%;
+    width: 100%;
     border-left: 1px solid #252525;
     border-bottom: 1px solid #252525;
 }
@@ -40,7 +43,7 @@
 
 .tickets{
     top: 40%;
-    left: -20%;
+    left: -10%;
     /* transform:  translate(-50%, -50%); */
     transform: rotate(-90deg);
 }
@@ -55,6 +58,7 @@
     align-items: center;
     position: absolute;
     gap: 20px;
+    margin-top: -27px;
 }
 
 .bar{
