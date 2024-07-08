@@ -1,66 +1,110 @@
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 50px;
     flex-direction: column;
-}
-
-.btn{
+  }
+  
+  .btn {
     padding: 10px 15px;
     color: white;
-    background: #2E4053;
+    background: #2e4053;
     border-radius: 10px;
-    /* font-size: 18px; */
     font-weight: bold;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
-}
-
-.btn:active{
-    transform: scale(.9);
-}
-
-.barChart-container{
-    margin-top: 20px;
+  }
+  
+  .btn:active {
+    transform: scale(0.9);
+  }
+  
+  .barChart-container {
+    margin-top: 70px;
     position: relative;
-    height: 300px;
+    height: 300px; /* Ensure height is set for the container */
     width: 80%;
-
-    
-}
-
-.axis{
-    height: 100%;
+    position: relative;
+  }
+  
+  .axis {
+    height: 100%; /* Ensure axis takes full height */
     width: 100%;
     border-left: 1px solid #252525;
     border-bottom: 1px solid #252525;
-}
-
-.tickets, .department{
+  }
+  
+  .tickets, .department {
     position: absolute;
-}
-
-.tickets{
+  }
+  
+  .tickets {
     top: 40%;
-    left: -10%;
-    /* transform:  translate(-50%, -50%); */
+    left: -35%;
+    /* left: -10% */
     transform: rotate(-90deg);
-}
-
-.department{
-    left: 45%;
-}
-
-.chart{
+  }
+  
+  .department {
+    /* left: 45%; */
+    left: 25%;
+  }
+  
+  .chart {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end; /* Align items to the bottom to simulate bar chart */
+    height: 100%; /* Ensure chart takes full height */
+    width: 100%;
+    /* gap: 40px; */
+    gap: 10px;
     position: absolute;
-    gap: 20px;
-    margin-top: -27px;
-}
-
-.bar{
+    top: 0;
+  }
+  
+  .bar {
     flex: 1;
-}
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Align bar name to the bottom */
+    color: white; /* Ensure bar name is visible */
+    padding: 5px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .category {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: -50px;
+    background-color: #252525;
+    padding: 5px;
+    border-radius: 5px;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: 100;
+  }
+  
+  .bar:hover > .category {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+
+  @media only screen and (min-width: 1024px) {
+    .barChart-container{
+      width: 60%;
+    }
+    .tickets{
+      left: -12%;
+    }
+    .department{
+      left: 45%;
+    }
+    .chart{
+      gap: 40px;
+    }
+  } 

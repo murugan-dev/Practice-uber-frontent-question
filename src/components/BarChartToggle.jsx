@@ -4,7 +4,7 @@ import Bar from "../constant/Bar";
 import "../css/Barchart.css"
 
 function BarChartToggle() {
-    const [show, setShow] = useState(true)
+    const [show, setShow] = useState(false)
 
   return (
     <div className="container">
